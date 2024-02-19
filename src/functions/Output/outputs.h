@@ -30,12 +30,12 @@ public:
     PCAL9535A::PCAL9535A<ace_wire::SimpleWireInterface>& gpioY;
     PCAL9535A::PCAL9535A<ace_wire::SimpleWireInterface>& gpioG;
     LightPins pins;
+    const char* name;
   };
 
   // Constructeur
-  TrafficLight(const GpioColors& gpioColors);
+  TrafficLight(const GpioColors &gpioColors);
 
-  // Initialisation du feu de signalisation
   void init();
   void turnOnRed();
   void turnOnYellow();
@@ -47,6 +47,7 @@ public:
 private:
   // Référence vers la structure GPIO associée à chaque couleur
   const GpioColors& gpioColors_;
+  const char *name_;
 };
 
 

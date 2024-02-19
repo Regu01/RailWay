@@ -3,18 +3,22 @@
 
 #include <Arduino.h>
 
-class Inputs {
+class Canton {
 public:
-  Inputs();
-  void setupInputs();
-  bool readDigitalInput(int pin);
-  void readDigitalAllInputs(bool* digitalPinValue);
+  // Structure pour représenter les broches des cantons
+  struct CantonPins {
+    uint8_t pin;
+  };
 
+  // Constructeur prenant la configuration des broches des cantons
+  Canton(const CantonPins& cantonPins);
+
+  void init();
+  bool readDigitalInput(int pin);
 
 private:
-  static const int digitalPins[];
-  static const int numDigitalPins;
-
+  // Déclaration des broches des cantons
+  CantonPins cantonPins;
 };
 
 #endif

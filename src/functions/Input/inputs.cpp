@@ -1,31 +1,16 @@
 #include "inputs.h"
 
-const int Inputs::digitalPins[] = {34, 35, 32, 33, 25, 26, 27, 14, 17, 13, 4};
-const int Inputs::numDigitalPins = sizeof(Inputs::digitalPins) / sizeof(Inputs::digitalPins[0]);
+Canton::Canton(const CantonPins& cantonPins)
+    : cantonPins(cantonPins) {}
 
-Inputs::Inputs() {
-  // Constructor
+void Canton::init() {
+    // Configurez les broches GPIO comme sorties
+    Serial.print("Setting up Canton on pin : ");
+    Serial.println(cantonPins.pin);
+
+    pinMode(cantonPins.pin, INPUT);
 }
 
-
-void Inputs::setupInputs() {
-  // Initialize input pins using a loop
-  for (int i = 0; i < numDigitalPins; i++) {
-    pinMode(digitalPins[i], INPUT);
-  }
-}
-
-
-
-
-bool Inputs::readDigitalInput(int pin) {
-  // Read and return digital input value
+bool Canton::readDigitalInput(int pin) {
   return digitalRead(pin);
-}
-
-void Inputs::readDigitalAllInputs(bool* digitalPinValues) {
-  // Read all digital inputs
-  for (int i = 0; i < numDigitalPins; i++) {
-    digitalPinValues[i] = digitalRead(digitalPins[i]);
-  }
 }
