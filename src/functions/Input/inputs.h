@@ -2,22 +2,24 @@
 #define INPUTS_H
 
 #include <Arduino.h>
+#include <vector>
 
 class Canton {
 public:
-  // Structure pour représenter les broches des cantons
   struct CantonPins {
     uint8_t pin;
+    const char* name;
   };
 
-  // Constructeur prenant la configuration des broches des cantons
   Canton(const CantonPins& cantonPins);
 
   void init();
-  bool readDigitalInput(int pin);
+  bool readDigitalInput() const;
+  const char* getCantonName() const;
+  // Ajout de la nouvelle fonction
+  bool* readAllDigitalInputs() const;
 
 private:
-  // Déclaration des broches des cantons
   CantonPins cantonPins;
 };
 
