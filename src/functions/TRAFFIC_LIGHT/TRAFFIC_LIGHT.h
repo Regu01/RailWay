@@ -1,5 +1,5 @@
-#ifndef OUTPUTS_H
-#define OUTPUTS_H
+#ifndef TRAFFIC_LIGHT_H
+#define TRAFFIC_LIGHT_H
 
 #include <Arduino.h>
 #include <AceWire.h>
@@ -10,9 +10,6 @@ extern PCAL9535A::PCAL9535A<SimpleWireInterface> gpio1;
 extern PCAL9535A::PCAL9535A<SimpleWireInterface> gpio2;
 extern PCAL9535A::PCAL9535A<SimpleWireInterface> gpio3;
 extern PCAL9535A::PCAL9535A<SimpleWireInterface> gpio4;
-
-
-
 
 
 class TrafficLight {
@@ -53,4 +50,4 @@ private:
 
 
 
-#endif // OUTPUTS_H
+#endif
