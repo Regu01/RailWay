@@ -1,0 +1,5 @@
+1734111637: mosquitto version 2.0.20 starting
+1734111637: Config loaded from /mosquitto/config/mosquitto.conf.
+1734111637: Opening ipv4 listen socket on port 1883.
+1734111637: Opening ipv6 listen socket on port 1883.
+1734111637: mosquitto version 2.0.20 running

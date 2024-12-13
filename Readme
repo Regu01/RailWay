@@ -1,0 +1,5 @@
+### docker-compose up -d
+
+### Use Extension in VS code : VSMQTT
+Local => mqtt://localhost:1883
+Network => hostname -I      ||      ipconfig | findstr /i "IPv4"
