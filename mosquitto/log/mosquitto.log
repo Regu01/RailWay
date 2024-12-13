@@ -25,3 +25,5 @@
 1734113223: New connection from 172.19.0.1:50700 on port 1883.
 1734113223: New client connected from 172.19.0.1:50700 as mqtt-explorer-752896d5 (p2, c1, k60).
 1734113234: Client mqtt-explorer-752896d5 disconnected.
+1734113260: New connection from 172.19.0.1:45018 on port 1883.
+1734113260: New client connected from 172.19.0.1:45018 as mqtt-explorer-752896d5 (p2, c1, k60).

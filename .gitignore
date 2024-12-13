@@ -1,3 +1,4 @@
-./mosquitto/log/mosquitto.log
+
 ./.pio/
 ./.vscode/
+mosquitto/log/mosquitto.log
