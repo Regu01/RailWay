@@ -3,3 +3,5 @@
 1734111637: Opening ipv4 listen socket on port 1883.
 1734111637: Opening ipv6 listen socket on port 1883.
 1734111637: mosquitto version 2.0.20 running
+1734111667: New connection from 172.18.0.1:60408 on port 1883.
+1734111667: New client connected from 172.18.0.1:60408 as vsmqtt_client_763c (p2, c1, k60).
